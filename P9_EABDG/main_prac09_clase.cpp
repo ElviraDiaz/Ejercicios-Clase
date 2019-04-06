@@ -431,11 +431,13 @@ void display(void)
 	model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
 	lightingShader.setMat4("model", model);
 	lightingShader.setInt("material_diffuse", t_Cielo);
+	lightingShader.setInt("material_specular", t_Cielo);
 	glDrawArrays(GL_QUADS, 24, 4);
 
 	//Enfrente   
 	lightingShader.setMat4("model", model);
 	lightingShader.setInt("material_diffuse", t_smile);
+	lightingShader.setInt("material_specular", t_smile);
 	glDrawArrays(GL_QUADS, 28, 4);
 	//Izquierda
 	lightingShader.setMat4("model", model);
@@ -450,11 +452,13 @@ void display(void)
 	//Abajo
 	lightingShader.setMat4("model", model);
 	lightingShader.setInt("material_diffuse", t_erizo);
+	lightingShader.setInt("material_specular", t_erizo);
 	glDrawArrays(GL_QUADS, 40, 4);
 	
 	//Arriba
 	lightingShader.setMat4("model", model);
 	lightingShader.setInt("material_diffuse", t_erizo_cobijita);
+	lightingShader.setInt("material_specular", t_erizo_cobijita);
 	glDrawArrays(GL_QUADS, 44, 4);
 
 
